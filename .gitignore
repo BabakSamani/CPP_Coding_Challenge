@@ -73,3 +73,6 @@ typings/
 
 # Ignoring python exe files
 *.pyc
+
+# C++ object files
+*.o
