@@ -1,4 +1,5 @@
 # Ignore the IDE development files
+.vscode
 .idea
 /.idea
 ./.idea
