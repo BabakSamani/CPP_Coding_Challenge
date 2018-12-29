@@ -9,5 +9,6 @@
 #include <iostream>
 #include <string>
 
+#include <vehicle.hpp>
 #include "car.hpp"
 

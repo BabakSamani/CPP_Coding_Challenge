@@ -9,12 +9,23 @@
 #ifndef car_hpp
 #define car_hpp
 
-class car
+#include <iostream>
+#include <string>
+
+#include "vehicle.hpp"
+
+class car : public MotorVehicle
 {
 private:
+	std::string VIN;
+	std::string made;
+	std::string year;
+	std::string model;
+	std::string color;
 
 public:
 	car();
+	car(std::string VIN, std::string made, std::string year, std::string model, std::string color);
 	~car();
 	
 };
