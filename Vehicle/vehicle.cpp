@@ -2,7 +2,7 @@
 //  vehicle.cpp
 //  car_dealership
 //
-//  Created by Babak Jafari on 12/27/18.
+//  Created by Babak Samani on 12/27/18.
 //  Copyright © 2018 Babak Samani. All rights reserved.
 //
 #include <iostream>
@@ -49,10 +49,6 @@ void Bicycle::setSize(int _size){
 	this->size = _size;
 }
 
-void Bicycle::setBikeType(std::string _bikeType){
-	this->bikeType = _bikeType;
-}
-
 void Bicycle::setPrice(double _price){
 	this->price = _price;
 }
@@ -60,10 +56,6 @@ void Bicycle::setPrice(double _price){
 // Bicycle class getters
 int Bicycle::getSize() const {
 	return this->size;
-}
-
-std::string Bicycle::getBikeType() const {
-	return this->bikeType;
 }
 
 double Bicycle::getPrice() const {
@@ -89,6 +81,10 @@ void MotorVehicle::setLicencePlate(std::string _licencePlate){
 	this->licencePlate = _licencePlate;
 }
 
+void MotorVehicle::setMPG(double _mpg){
+	this->MPG = _mpg;
+}
+
 // MotorVehicle class getters implementation
 double MotorVehicle::getEngineCapacity() const {
 	return this->engineCapacity;
@@ -98,9 +94,43 @@ std::string MotorVehicle::getLicencePlate() const {
 	return this->licencePlate;
 }
 
+double MotorVehicle::getMPG() const {
+	return this->MPG;
+}
 
 
+// MotorBike class ------------------------------------------------------------------------------------------
+MotorBike::MotorBike(){
+	std::cout << "MotorBike class constructor is called\n";
+}
 
+MotorBike::~MotorBike(){
+	std::cout << "MotorBike class destructor is called\n";
+}
+
+void MotorBike::setMade(std::string _made){
+	this->made = _made;
+}
+
+void MotorBike::setYear(std::string _year){
+	this->year = _year;
+}
+
+void MotorBike::setModel(std::string _model){
+	this->model = _model;
+}
+
+std::string MotorBike::getMade() const {
+	return this->made;
+}
+
+std::string MotorBike::getYear() const {
+	return this->year;
+}
+
+std::string MotorBike::getModel() const {
+	return this->model;
+}
 
 
 
