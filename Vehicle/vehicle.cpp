@@ -27,11 +27,11 @@ void Vehicle::setSpeed(double _speed){
 }
 
 // Class getters
-std::string Vehicle::getType() const{
+std::string Vehicle::getType() const {
     return this->type;
 }
 
-double Vehicle::getSpeed() const{
+double Vehicle::getSpeed() const {
 	return this->speed;
 }
 
@@ -58,17 +58,63 @@ void Bicycle::setPrice(double _price){
 }
 
 // Bicycle class getters
-int Bicycle::getSize() const{
+int Bicycle::getSize() const {
 	return this->size;
 }
 
-std::string Bicycle::getBikeType() const{
+std::string Bicycle::getBikeType() const {
 	return this->bikeType;
 }
 
-double Bicycle::getPrice() const{
+double Bicycle::getPrice() const {
 	return this->price;
 }
+
+
+// MotorVehicle class ------------------------------------------------------------------------------------------
+MotorVehicle::MotorVehicle() {
+	std::cout << "MotorVehicle class constructor is called\n";
+}
+
+MotorVehicle::~MotorVehicle() {
+	std::cout << "MotorVehicle class destructor is called\n";
+}
+
+// MotorVehicle class setters implementation
+void MotorVehicle::setEngineCapacity(double _engineCapacity){
+	this->engineCapacity = _engineCapacity;
+}
+
+void MotorVehicle::setLicencePlate(std::string _licencePlate){
+	this->licencePlate = _licencePlate;
+}
+
+// MotorVehicle class getters implementation
+double MotorVehicle::getEngineCapacity() const {
+	return this->engineCapacity;
+}
+
+std::string MotorVehicle::getLicencePlate() const {
+	return this->licencePlate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -65,9 +65,11 @@ class MotorVehicle : public Vehicle {
 
         // Class setters
         void setEngineCapacity(double _engineCapacity);
-        void setLicencePlate(std:: _licencePlate);
+        void setLicencePlate(std::string _licencePlate);
 
-        
-}
+        // Class getters
+        double getEngineCapacity() const;
+        std::string getLicencePlate() const;
+};
 
 #endif /* vehicle_hpp */
