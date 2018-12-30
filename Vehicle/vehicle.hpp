@@ -11,6 +11,7 @@
 
 #include <iostream>
 
+// Supper class
 class Vehicle {
     private:
         std::string type;
@@ -30,6 +31,7 @@ class Vehicle {
 };
 
 // Bicycle class extends Vehicle class and inherits some attributes from Vehicle class
+// Sub class
 class Bicycle : public Vehicle {
     private:
         int size;

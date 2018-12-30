@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
     std::cout << "Type of this vehicle is: " << mv.getType() << std::endl;
 
     // Create an instance of car class
-    Car _car("VIN", "Hyundai", "2013", "Santafe", "Black", 20000, 45000);
+    Car _car("vin", "Hyundai", "2013", "Santafe", "Black", 20000, 45000);
     _car.setType("Sedan");
 
     _car.printCarInfo();

@@ -91,13 +91,55 @@ int Car::getMileage() const {
 
 // A function for printing out a car info
 void Car::printCarInfo(){
-	std::cout << "VIN: " << this->VIN << std::endl;
-	std::cout << "Made: " << this->made << std::endl;
-	std::cout << "Year: " << this->year << std::endl;
-	std::cout << "Model: " << this->model << std::endl;
-	std::cout << "Color: " << this->color << std::endl;
-	std::cout << "Mileage: " << this->mileage << std::endl;
-	std::cout << "Price: " << this->price << std::endl;
+	std::string _vin, _made, _model, _year, _color;
+	
+	int _mileage;
+	double _price;
+
+	_vin   = this->VIN;
+	_made  = this->made;
+	_year  = this->year;
+	_model = this->model;
+	_color = this->color;
+
+	_mileage = this->mileage;
+	_price   = this->price;
+
+	// Check for NULL values
+	if ( (uintptr_t)&this->VIN == (uintptr_t)NULL ) {
+		_vin = "NA";
+	}
+
+	if ( (uintptr_t)&this->made == (uintptr_t)NULL) {
+		_made = "NA";
+	}
+
+	if ( (uintptr_t)&this->year == (uintptr_t)NULL) {
+		_year = "NA";
+	}
+
+	if ( (uintptr_t)&this->color == (uintptr_t)NULL) {
+		_color = "NA";
+	}
+	if ( (uintptr_t)&this->model == (uintptr_t)NULL) {
+		_model = "NA";
+	}
+	if ( (uintptr_t)&this->mileage == (uintptr_t)NULL) {
+		_mileage = -1;
+	}
+
+	if ( (uintptr_t)&this->price == (uintptr_t)NULL) {
+		_price = -1;
+	}
+
+	std::cout << "VIN: " << _vin << std::endl;			// string
+	std::cout << "Made: " << _made << std::endl;		// string
+	std::cout << "Year: " << _year << std::endl;		// string
+	std::cout << "Model: " << _model << std::endl;		// string
+	std::cout << "Color: " << _color << std::endl;		// string
+	std::cout << "Mileage: " << _mileage << std::endl; 	// int
+	std::cout << "Price: " << _price << std::endl; 		// double
+	
 }
 
 
