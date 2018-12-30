@@ -34,6 +34,8 @@ public:
 	// Second constructor
 	Car(std::string _VIN, std::string _made, std::string _year, 
 		std::string _model, std::string _color, double _price, int _mileage);
+	
+	// Class destructor
 	~Car();
 
 	// Class setters
