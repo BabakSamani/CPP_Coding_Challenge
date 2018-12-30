@@ -14,7 +14,7 @@
 
 #include "vehicle.hpp"
 
-class car : public MotorVehicle
+class Car : public MotorVehicle
 {
 private:
 	std::string VIN;
@@ -24,12 +24,17 @@ private:
 	std::string color;
 
 	double price;
+	int mileage;
 
 public:
-	// CClass constructor and destructor
-	car();
-	car(std::string VIN, std::string made, std::string year, std::string model, std::string color);
-	~car();
+	// Class constructor and destructor
+	// Constructor overloading
+	// First constructor
+	Car();
+	// Second constructor
+	Car(std::string _VIN, std::string _made, std::string _year, 
+		std::string _model, std::string _color, double _price, int _mileage);
+	~Car();
 
 	// Class setters
 	void setVIN(std::string _VIN);
@@ -38,6 +43,7 @@ public:
 	void setModel(std::string _model);
 	void setColor(std::string _color);
 	void setPrice(double _price);
+	void setMileage(int _mileage);
 
 	// Class getters
 	std::string getVIN() const;
@@ -46,7 +52,11 @@ public:
 	std::string getModel() const;
 	std::string getColor() const;
 	double getPrice() const;
+	int getMileage() const;
 
+
+	// A function for displaying the info of a car
+	void printCarInfo();
 
 	
 };
