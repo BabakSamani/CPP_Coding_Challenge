@@ -14,14 +14,16 @@
 
 #include "vehicle.hpp"
 
+using namespace std;
+
 class Car : public MotorVehicle
 {
 private:
-	std::string VIN;
-	std::string made;
-	std::string year;
-	std::string model;
-	std::string color;
+	string VIN;
+	string made;
+	string year;
+	string model;
+	string color;
 
 	double price;
 	int mileage;
@@ -32,27 +34,27 @@ public:
 	// First constructor
 	Car();
 	// Second constructor
-	Car(std::string _VIN, std::string _made, std::string _year, 
-		std::string _model, std::string _color, double _price, int _mileage);
+	Car(string _VIN, string _made, string _year, 
+		string _model, string _color, double _price, int _mileage);
 	
 	// Class destructor
 	~Car();
 
 	// Class setters
-	void setVIN(std::string _VIN);
-	void setMade(std::string _made);
-	void setYear(std::string _year);
-	void setModel(std::string _model);
-	void setColor(std::string _color);
+	void setVIN(string _VIN);
+	void setMade(string _made);
+	void setYear(string _year);
+	void setModel(string _model);
+	void setColor(string _color);
 	void setPrice(double _price);
 	void setMileage(int _mileage);
 
 	// Class getters
-	std::string getVIN() const;
-	std::string getMade() const;
-	std::string getYear() const;
-	std::string getModel() const;
-	std::string getColor() const;
+	string getVIN() const;
+	string getMade() const;
+	string getYear() const;
+	string getModel() const;
+	string getColor() const;
 	double getPrice() const;
 	int getMileage() const;
 

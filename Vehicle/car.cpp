@@ -12,12 +12,14 @@
 #include "vehicle.hpp"
 #include "car.hpp"
 
+using namespace std;
+
 Car::Car(){
-	std::cout << "First class constructor is called without any arguments for Car class.\n";
+	cout << "First class constructor is called without any arguments for Car class.\n";
 }
 
-Car::Car(std::string _VIN, std::string _made, std::string _year, 
-		 std::string _model, std::string _color, double _price, int _mileage){
+Car::Car(string _VIN, string _made, string _year, 
+		 string _model, string _color, double _price, int _mileage){
 	this->VIN = _VIN;
 	this->made = _made;
 	this->year = _year;
@@ -29,29 +31,29 @@ Car::Car(std::string _VIN, std::string _made, std::string _year,
 }
 
 Car::~Car(){
-	std::cout << "Car class destructor is called\n";
+	cout << "Car class destructor is called\n";
 }
 // Class setters
-void Car::setVIN(std::string _VIN) { this->VIN = _VIN; }
-void Car::setMade(std::string _made){ this->made = _made; }
-void Car::setYear(std::string _year){ this->year = _year; }
-void Car::setModel(std::string _model){ this->model = _model; }
-void Car::setColor(std::string _color){ this->color = _color; }
+void Car::setVIN(string _VIN) { this->VIN = _VIN; }
+void Car::setMade(string _made){ this->made = _made; }
+void Car::setYear(string _year){ this->year = _year; }
+void Car::setModel(string _model){ this->model = _model; }
+void Car::setColor(string _color){ this->color = _color; }
 void Car::setPrice(double _price){ this->price = _price; }
 void Car::setMileage(int _mileage){ this->mileage = _mileage; }
 
 // Class getters
-std::string Car::getVIN() const { return this->VIN; }
-std::string Car::getMade() const { return this->made; }
-std::string Car::getYear() const { return this->year; }
-std::string Car::getModel() const { return this->model; }
-std::string Car::getColor() const { return this->color; }
+string Car::getVIN() const { return this->VIN; }
+string Car::getMade() const { return this->made; }
+string Car::getYear() const { return this->year; }
+string Car::getModel() const { return this->model; }
+string Car::getColor() const { return this->color; }
 double Car::getPrice() const { return this->price; }
 int Car::getMileage() const { return this->mileage; }
 
 // A function for printing out a car info
 void Car::printCarInfo(){
-	std::string _vin, _made, _model, _year, _color;
+	string _vin, _made, _model, _year, _color;
 	
 	int _mileage;
 	double _price;
@@ -92,13 +94,13 @@ void Car::printCarInfo(){
 		_price = -1;
 	}
 
-	std::cout << "VIN: " << _vin << std::endl;			// string
-	std::cout << "Made: " << _made << std::endl;		// string
-	std::cout << "Year: " << _year << std::endl;		// string
-	std::cout << "Model: " << _model << std::endl;		// string
-	std::cout << "Color: " << _color << std::endl;		// string
-	std::cout << "Mileage: " << _mileage << std::endl; 	// int
-	std::cout << "Price: " << _price << std::endl; 		// double
+	cout << "VIN: " << _vin << endl;			// string
+	cout << "Made: " << _made << endl;		// string
+	cout << "Year: " << _year << endl;		// string
+	cout << "Model: " << _model << endl;		// string
+	cout << "Color: " << _color << endl;		// string
+	cout << "Mileage: " << _mileage << endl; 	// int
+	cout << "Price: " << _price << endl; 		// double
 	
 }
 
